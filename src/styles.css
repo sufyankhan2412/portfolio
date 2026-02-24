@@ -1,0 +1,12 @@
+/* Minimal overrides; main styling kept in existing sufi.css which is linked from index.html */
+body{
+  background: var(--bg-color, #000);
+  color: var(--text-color, #fff);
+  font-family: Poppins, sans-serif;
+}
+
+main h1{font-size:2.2rem;margin-bottom:0.5rem}
+section h2{margin-top:0.5rem;margin-bottom:0.5rem}
+
+ul{list-style: none;padding-left:0}
+li a{margin-left:0.5rem;color: #ff00a6}
