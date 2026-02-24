@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import About from './components/About'
-import Services from './components/Services'
 import Education from './components/Education'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
@@ -16,7 +15,6 @@ export default function App(){
       <main style={{padding: '2rem'}}>
         <Home />
         <About />
-        <Services />
         <Education />
         <Skills />
         <Projects />
