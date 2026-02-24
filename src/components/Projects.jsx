@@ -40,17 +40,38 @@ const projects = [
 ]
 
 export default function Projects(){
+  const [hoveredIdx, setHoveredIdx] = React.useState(null)
   return (
-    <section id="projects" style={{marginTop: '2rem', paddingTop:'2rem'}}>
-      <h2 className="heading">My Projects</h2>
-      <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(320px, 1fr))', gap:'2rem', maxWidth:1200, margin:'2rem auto'}}>
+    <section id="projects" style={{marginTop: '2rem', paddingTop:'3rem', paddingBottom:'3rem'}}>
+      <h2 className="heading" style={{marginBottom:'2rem'}}>Featured Projects</h2>
+      <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(340px, 1fr))', gap:'2.5rem', maxWidth:1300, margin:'0 auto', padding:'0 1rem'}}>
         {projects.map((p, i) => (
-          <div key={i} className="animated-card" style={{background:'rgba(255,0,166,0.08)', border:'2px solid #ff00a6', borderRadius:'1rem', padding:'1.5rem', transition:'all 0.3s ease'}} onMouseEnter={(e)=>e.currentTarget.style.boxShadow='0 8px 24px rgba(255,0,166,0.2)'} onMouseLeave={(e)=>e.currentTarget.style.boxShadow='none'}>
-            <h4 style={{color:'#ff00a6', marginBottom:'0.5rem'}}>{p.title}</h4>
-            <p style={{fontSize:'0.95rem', lineHeight:1.6, marginBottom:'1rem'}}>{p.desc}</p>
-            <div style={{display:'flex', gap:'1rem'}}>
-              {p.github && <a href={p.github} target="_blank" rel="noreferrer" style={{color:'#fff', textDecoration:'underline'}}>View Code</a>}
-              {p.website && <a href={p.website} target="_blank" rel="noreferrer" style={{color:'#ff00a6', textDecoration:'underline'}}>Visit Site</a>}
+          <div 
+            key={i} 
+            className="animated-card" 
+            style={{
+              background:'linear-gradient(135deg, rgba(255,0,166,0.12) 0%, rgba(255,0,166,0.03) 100%)', 
+              border:'2px solid rgba(255,0,166,0.3)',
+              borderRadius:'1.25rem', 
+              padding:'2rem', 
+              transition:'all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)',
+              animationDelay: `${i*0.1}s`,
+              transform: hoveredIdx === i ? 'translateY(-8px) scale(1.02)' : 'translateY(0)',
+              boxShadow: hoveredIdx === i ? '0 20px 40px rgba(255,0,166,0.25)' : '0 4px 12px rgba(0,0,0,0.1)',
+              backdropFilter: 'blur(10px)',
+              cursor:'pointer'
+            }} 
+            onMouseEnter={() => setHoveredIdx(i)} 
+            onMouseLeave={() => setHoveredIdx(null)}
+          >
+            <div style={{marginBottom:'1rem'}}>
+              <h4 style={{color:'#ff00a6', marginBottom:'0.8rem', fontSize:'1.3rem', fontWeight:700}}>{p.title}</h4>
+              <div style={{width:'40px', height:'3px', background:'linear-gradient(90deg, #ff00a6, rgba(255,0,166,0.3))', borderRadius:'2px'}}></div>
+            </div>
+            <p style={{fontSize:'1rem', lineHeight:1.7, marginBottom:'1.5rem', color:'#ddd'}}>{p.desc}</p>
+            <div style={{display:'flex', gap:'1.5rem', flexWrap:'wrap'}}>
+              {p.github && p.github !== '#' && <a href={p.github} target="_blank" rel="noreferrer" style={{color:'#ff00a6', textDecoration:'none', fontWeight:600, borderBottom:'2px solid #ff00a6', paddingBottom:'0.2rem', transition:'all 0.3s ease'}} onMouseEnter={(e)=>{e.target.style.color='#fff'; e.target.style.borderBottomColor='#fff'}} onMouseLeave={(e)=>{e.target.style.color='#ff00a6'; e.target.style.borderBottomColor='#ff00a6'}}>→ View Code</a>}
+              {p.website && <a href={p.website} target="_blank" rel="noreferrer" style={{color:'#fff', textDecoration:'none', fontWeight:600, borderBottom:'2px solid #fff', paddingBottom:'0.2rem', transition:'all 0.3s ease'}} onMouseEnter={(e)=>{e.target.style.color='#ff00a6'; e.target.style.borderBottomColor='#ff00a6'}} onMouseLeave={(e)=>{e.target.style.color='#fff'; e.target.style.borderBottomColor='#fff'}}>→ Visit Live</a>}
             </div>
           </div>
         ))}

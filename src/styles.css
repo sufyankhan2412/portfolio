@@ -21,6 +21,9 @@ li a{margin-left:0.5rem;color: #ff00a6}
 .animated-card:nth-child(2){ animation-delay: 0.12s }
 .animated-card:nth-child(3){ animation-delay: 0.18s }
 .animated-card:nth-child(4){ animation-delay: 0.24s }
+.animated-card:nth-child(5){ animation-delay: 0.3s }
+.animated-card:nth-child(6){ animation-delay: 0.36s }
+.animated-card:nth-child(7){ animation-delay: 0.42s }
 
 @keyframes slideUp{
   to{ transform: translateY(0); opacity: 1 }
