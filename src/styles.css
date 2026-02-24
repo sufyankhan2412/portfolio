@@ -36,3 +36,16 @@ li a{margin-left:0.5rem;color: #ff00a6}
 /* Make headings clearer */
 .heading{ color: #fff; font-weight:800 }
 
+/* responsive adjustments */
+@media screen and (max-width: 768px) {
+  main h1 { font-size: 1.8rem; }
+  section h2 { font-size: 1.6rem; }
+  .animated-card { animation-duration: 600ms !important; }
+  .container { width: 90%; }
+  .row { grid-template-columns: repeat(auto-fill,minmax(120px,1fr)); }
+  .bar { padding: 1rem; }
+  .bar img { max-height: 50px; }
+  ul { padding-left: 0.5rem; }
+}
+
+
