@@ -10,3 +10,26 @@ section h2{margin-top:0.5rem;margin-bottom:0.5rem}
 
 ul{list-style: none;padding-left:0}
 li a{margin-left:0.5rem;color: #ff00a6}
+
+/* Animations */
+.animated-card{
+  transform: translateY(8px);
+  opacity: 0;
+  animation: slideUp 700ms ease forwards;
+}
+.animated-card:nth-child(1){ animation-delay: 0.05s }
+.animated-card:nth-child(2){ animation-delay: 0.12s }
+.animated-card:nth-child(3){ animation-delay: 0.18s }
+.animated-card:nth-child(4){ animation-delay: 0.24s }
+
+@keyframes slideUp{
+  to{ transform: translateY(0); opacity: 1 }
+}
+
+/* Hover effects for skill items */
+.bar img{ transition: transform 0.28s ease, filter 0.28s ease }
+.bar:hover img{ transform: scale(1.08); filter: drop-shadow(0 6px 18px rgba(255,0,166,0.18)) }
+
+/* Make headings clearer */
+.heading{ color: #fff; font-weight:800 }
+
