@@ -3,335 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Sufyan - MERN Developer & Designer</title>
+    <title>Muhammad Sufyan - Full Stack Developer & Designer</title>
     <link rel="stylesheet" href="sufi.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header">
-        <a href="#home" class="logo">Sufyan <span>Khan</span></a>
-        <i class='bx bx-menu' id="menu-icon"></i>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                Sufyan <span>Khan</span>
+            </div>
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <a href="#contact" class="nav-btn">Download CV</a>
+        </div>
     </header>
 
-    <!-- HOME SECTION -->
-    <section class="home" id="home">
-        <div class="home-content">
-            <h1>Hi, I'm <span>Muhammad Sufyan</span></h1>
-            <h3 class="text-animation">I am a <span></span></h3>
-            <p>Junior Full Stack MERN Developer with hands-on industry experience building scalable, user-focused web applications. I craft seamless digital experiences combining modern frontend design with robust backend architecture.</p>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/sufyankhan24_" target="_blank"><i class='bx bxl-instagram'></i></a>
-                <a href="https://www.facebook.com/sufyankhan3082" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
-                <a href="https://www.linkedin.com/in/sufyan-khan-3683bb291" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/sufyankhan2412" target="_blank"><i class='bx bxl-github'></i></a>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-subtitle">Welcome to my portfolio</p>
+                <h1 class="hero-title">I have <span>Creative Design</span> Experience</h1>
+                <p class="hero-description">I'm Muhammad Sufyan, a Full Stack MERN Developer with 2+ years of proven experience building scalable web applications and delivering exceptional digital solutions.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Contact Me</a>
+                    <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
+                </div>
             </div>
-            <div class="btn-group">
-                <a href="#contact" class="btn">Get In Touch</a>
-                <a href="#projects" class="btn">View My Work</a>
+            <div class="hero-image">
+                <img src="professional-photo.jpg" alt="Muhammad Sufyan">
             </div>
         </div>
-        <div class="home-img">
-            <img src="professional-photo.jpg" alt="Muhammad Sufyan">
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>80+</h3>
+                <p>Satisfied Clients</p>
+            </div>
+            <div class="stat-card">
+                <h3>200+</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-card">
+                <h3>99+</h3>
+                <p>Reviews Given</p>
+            </div>
         </div>
     </section>
 
     <!-- ABOUT SECTION -->
     <section class="about" id="about">
-        <h2 class="heading">About <span>Me</span></h2>
-        <div class="about-content">
-            <p>I am a Junior Full Stack MERN Developer with 2+ years of professional experience in building user-focused web applications. My journey spans from freelance projects to hands-on positions at leading tech companies. I'm passionate about creating elegant solutions to complex problems and continuously learning emerging technologies.</p>
-            <div class="about-stats">
-                <div class="stat-item">
-                    <h3>2+</h3>
-                    <p>Years of Experience</p>
-                </div>
-                <div class="stat-item">
-                    <h3>10+</h3>
-                    <p>Projects Completed</p>
-                </div>
-                <div class="stat-item">
-                    <h3>5+</h3>
-                    <p>Technologies Mastered</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EXPERIENCE SECTION -->
-    <section class="experience" id="experience">
-        <h2 class="heading">Professional <span>Experience</span></h2>
-        <div class="experience-container">
-            <div class="experience-card">
-                <div class="experience-header">
-                    <h3>Junior Software Developer</h3>
-                    <span class="company">DH Solutions</span>
-                </div>
-                <p class="duration"><i class='bx bx-calendar'></i> June 2025 - August 2025</p>
-                <p class="location"><i class='bx bx-map'></i> Islamabad, Pakistan</p>
-                <ul class="experience-details">
-                    <li>Worked in a 4-member agile team delivering client and internal full-stack applications</li>
-                    <li>Developed features across frontend (React) and backend (Node.js, Express, FastAPI)</li>
-                    <li>Designed and consumed REST APIs and implemented authentication workflows</li>
-                    <li>Participated in code reviews and optimized query performance</li>
-                    <li>Used Git & GitHub for version control, collaboration, and code reviews</li>
-                    <li>Assisted with deployments using AWS, Render, and Vercel</li>
-                </ul>
-            </div>
-
-            <div class="experience-card">
-                <div class="experience-header">
-                    <h3>Freelance Developer</h3>
-                    <span class="company">Self-Employed</span>
-                </div>
-                <p class="duration"><i class='bx bx-calendar'></i> 2023 - Present</p>
-                <ul class="experience-details">
-                    <li>Built full-stack e-commerce and SaaS applications</li>
-                    <li>Implemented responsive designs and optimized performance</li>
-                    <li>Collaborated with clients for requirement analysis and deployment</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- EDUCATION SECTION -->
-    <section class="education" id="education">
-        <h2 class="heading">Education</h2>
-        <div class="education-container">
-            <div class="education-row">
-                <div class="education-column">
-                    <h3>Academic Background</h3>
-                    <div class="education-item">
-                        <div class="edu-header">
-                            <h4>Bachelor of Science - Computer Science</h4>
-                            <span class="year">2022 - 2026</span>
+        <div class="about-container">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a Junior Full Stack MERN Developer with hands-on experience at DH Solutions and ongoing freelance work. My expertise spans frontend design with React, backend development with Node.js and Express, and database management with MongoDB. I'm passionate about creating elegant solutions and continuously learning emerging technologies.</p>
+                    <p>With a background in Computer Science from COMSATS University Islamabad, I combine academic knowledge with practical industry experience to deliver high-quality, user-focused applications.</p>
+                    <div class="education-brief">
+                        <div class="edu-item">
+                            <h4>Education</h4>
+                            <p><strong>BS Computer Science</strong> - COMSATS University (2022-2026)</p>
                         </div>
-                        <p class="institution">COMSATS University Islamabad</p>
-                        <p class="details">Currently pursuing degree with focus on software development, data structures, and algorithms.</p>
-                    </div>
-
-                    <div class="education-item">
-                        <div class="edu-header">
-                            <h4>FSC (Pre-Engineering)</h4>
-                            <span class="year">2021</span>
+                        <div class="edu-item">
+                            <h4>Experience</h4>
+                            <p><strong>Junior Developer</strong> - DH Solutions (June-Aug 2025)</p>
+                            <p><strong>Freelance Dev</strong> - Self-Employed (2023-Present)</p>
                         </div>
-                        <p class="institution">Punjab College</p>
-                        <p class="details">85% - Completed intermediate education</p>
-                    </div>
-
-                    <div class="education-item">
-                        <div class="edu-header">
-                            <h4>Matriculation</h4>
-                            <span class="year">2019</span>
-                        </div>
-                        <p class="institution">Allied School</p>
-                        <p class="details">88% - Completed secondary education</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="education-column">
-                    <h3>Relevant Coursework</h3>
-                    <ul class="coursework-list">
-                        <li>Web Programming I & II</li>
-                        <li>Data Structures & Algorithms</li>
-                        <li>Programming Fundamentals</li>
-                        <li>Artificial Intelligence</li>
-                        <li>Machine Learning</li>
-                        <li>Database Systems</li>
-                        <li>DevOps</li>
-                    </ul>
+    <!-- WHY HIRE ME SECTION -->
+    <section class="why-hire" id="why-hire">
+        <div class="why-hire-container">
+            <h2 class="section-title">Why Hire Me For Your <span>Next Project?</span></h2>
+            <p class="section-subtitle">I specialize in MERN stack development with emphasis on responsive design, performance optimization, and clean code architecture.</p>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <div class="skill-icon">
+                        <i class='bx bx-code-alt'></i>
+                    </div>
+                    <h4>Web Development</h4>
+                    <p>Full-stack development with React, Node.js, Express, and MongoDB. Responsive design and performance optimization.</p>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-icon">
+                        <i class='bx bx-palette'></i>
+                    </div>
+                    <h4>UI/UX Design</h4>
+                    <p>Modern, user-focused design with attention to detail. Interactive interfaces and smooth animations.</p>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-icon">
+                        <i class='bx bx-search'></i>
+                    </div>
+                    <h4>UX Research</h4>
+                    <p>User behavior analysis, competitive research, and data-driven design decisions for optimal results.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SKILLS SECTION -->
-    <section class="skills" id="skills">
-        <h2 class="heading">Technical <span>Skills</span></h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Frontend</h3>
-                <p>HTML5, CSS3, JavaScript (ES6+), React, Tailwind CSS, Responsive Design</p>
-            </div>
-            <div class="skill-category">
-                <h3>Backend</h3>
-                <p>Node.js, Express.js, REST APIs, Authentication (JWT, OAuth), Database Design</p>
-            </div>
-            <div class="skill-category">
-                <h3>Databases</h3>
-                <p>MongoDB, SQL, PostgreSQL, Firebase</p>
-            </div>
-            <div class="skill-category">
-                <h3>Tools & Platforms</h3>
-                <p>Git, GitHub, VS Code, Postman, AWS, Render, Vercel</p>
-            </div>
-            <div class="skill-category">
-                <h3>Other Technologies</h3>
-                <p>Python, Java, C++, Machine Learning, Digital Marketing</p>
-            </div>
-            <div class="skill-category">
-                <h3>Soft Skills</h3>
-                <p>Communication, Leadership, Time Management, Critical Thinking, Teamwork</p>
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-container">
+            <h2 class="section-title">My Creative <span>Works</span></h2>
+            <p class="section-subtitle">Latest Projects</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class='bx bx-briefcase'></i>
+                    </div>
+                    <h3>NextLayerStudio</h3>
+                    <p>Full-Stack MERN Agency Website</p>
+                    <p class="project-desc">Professional web agency website with modern design, service listings, portfolio, and client contact forms. Deployed on Vercel with optimized performance.</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <a href="https://github.com/sufyankhan2412/nextlayerstudio" target="_blank" class="project-link">View Project →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class='bx bx-shopping-bag'></i>
+                    </div>
+                    <h3>Pet Love E-Commerce</h3>
+                    <p>Full-Stack E-Commerce Platform</p>
+                    <p class="project-desc">E-commerce platform for pet products with advanced search, filtering, shopping cart, and secure payment integration using Stripe.</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>Express</span>
+                        <span>Stripe</span>
+                    </div>
+                    <a href="https://github.com/sufyankhan2412/petlove" target="_blank" class="project-link">View Project →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class='bx bx-bottle'></i>
+                    </div>
+                    <h3>Perfume Store</h3>
+                    <p>E-Commerce MERN Application</p>
+                    <p class="project-desc">Built e-commerce catalog with category filters, product search, shopping cart, and payment processing for fragrance products.</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <a href="https://github.com/sufyankhan2412/Perfume--Ecommerce-MERN" target="_blank" class="project-link">View Project →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class='bx bx-map'></i>
+                    </div>
+                    <h3>2D Urban Planning System</h3>
+                    <p>Web-Based Urban Planning Tool</p>
+                    <p class="project-desc">Automated housing society layout generator with 2D visualization. Implemented polygon-based land division and infrastructure mapping.</p>
+                    <div class="project-tags">
+                        <span>JavaScript</span>
+                        <span>Canvas API</span>
+                        <span>Algorithms</span>
+                    </div>
+                    <a href="https://github.com/HasnainAbbasi1/FYP-PLAN-IT" target="_blank" class="project-link">View Project →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class='bx bx-money'></i>
+                    </div>
+                    <h3>Currency Converter</h3>
+                    <p>Real-Time Exchange Rate App</p>
+                    <p class="project-desc">Interactive currency converter with live exchange rates, multiple currency support, and responsive UI design with real-time data.</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>API Integration</span>
+                        <span>Real-time</span>
+                    </div>
+                    <a href="https://github.com/sufyankhan2412/Currency-Converter-Website" target="_blank" class="project-link">View Project →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class='bx bx-book'></i>
+                    </div>
+                    <h3>Book Store</h3>
+                    <p>E-Commerce with Advanced Filtering</p>
+                    <p class="project-desc">Online bookstore with product search, category filters, advanced sorting, and structured backend APIs for seamless shopping experience.</p>
+                    <div class="project-tags">
+                        <span>MERN Stack</span>
+                        <span>Search & Filter</span>
+                        <span>REST APIs</span>
+                    </div>
+                    <a href="https://github.com/sufyankhan2412/Book-Store" target="_blank" class="project-link">View Project →</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section class="projects" id="projects">
-        <h2 class="heading">Featured <span>Projects</span></h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-header">NextLayerStudio</div>
-                <p class="project-type">Full-Stack MERN Agency Website</p>
-                <p class="project-description">Professional web agency website with modern design, service listings, portfolio, and client contact forms. Deployed on Vercel with optimized performance.</p>
-                <div class="project-tech">
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>MongoDB</span>
-                    <span>Vercel</span>
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials-container">
+            <h2 class="section-title">Our Customer Say <span>Something About Us</span></h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <p class="testimonial-text">Sufyan delivered an exceptional website for our business. His attention to detail and understanding of our requirements was outstanding. Highly recommended!</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Ahmad Hassan</h4>
+                            <p>Business Owner</p>
+                        </div>
+                    </div>
                 </div>
-                <a href="https://github.com/sufyankhan2412/nextlayerstudio" target="_blank" class="project-link">View Code <i class='bx bx-link-external'></i></a>
-            </div>
 
-            <div class="project-card">
-                <div class="project-header">Pet Love E-Commerce</div>
-                <p class="project-type">Full-Stack Pet Products Platform</p>
-                <p class="project-description">E-commerce platform for pet products with advanced search, filtering, shopping cart, and secure payment integration. Built with MERN stack.</p>
-                <div class="project-tech">
-                    <span>React</span>
-                    <span>Express</span>
-                    <span>MongoDB</span>
-                    <span>Stripe</span>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <p class="testimonial-text">Working with Sufyan was a great experience. He's professional, responsive, and delivered the project on time with excellent quality. Best developer I've worked with.</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Fatima Khan</h4>
+                            <p>Startup Founder</p>
+                        </div>
+                    </div>
                 </div>
-                <a href="https://github.com/sufyankhan2412/Book-Recommendation-System" target="_blank" class="project-link">View Code <i class='bx bx-link-external'></i></a>
-            </div>
 
-            <div class="project-card">
-                <div class="project-header">Perfume Store</div>
-                <p class="project-type">E-Commerce MERN Application</p>
-                <p class="project-description">Built e-commerce catalog with category filters, product search, shopping cart, and payment processing for fragrance products.</p>
-                <div class="project-tech">
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>MongoDB</span>
-                    <span>CSS3</span>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <p class="testimonial-text">Excellent communication, quick turnaround, and superior technical skills. Sufyan understood our vision and brought it to life beautifully. Would definitely hire again!</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Ali Raza</h4>
+                            <p>Marketing Manager</p>
+                        </div>
+                    </div>
                 </div>
-                <a href="https://github.com/sufyankhan2412/Perfume--Ecommerce-MERN" target="_blank" class="project-link">View Code <i class='bx bx-link-external'></i></a>
-            </div>
-
-            <div class="project-card">
-                <div class="project-header">2D Urban Planning System</div>
-                <p class="project-type">Web-Based Urban Planning Tool</p>
-                <p class="project-description">Automated housing society layout generator with 2D visualization. Implemented polygon-based land division and infrastructure mapping.</p>
-                <div class="project-tech">
-                    <span>JavaScript</span>
-                    <span>Canvas API</span>
-                    <span>Algorithms</span>
-                </div>
-                <a href="https://github.com/HasnainAbbasi1/FYP-PLAN-IT" target="_blank" class="project-link">View Code <i class='bx bx-link-external'></i></a>
-            </div>
-
-            <div class="project-card">
-                <div class="project-header">Currency Converter</div>
-                <p class="project-type">Real-Time Currency Exchange App</p>
-                <p class="project-description">Interactive currency converter with live exchange rates, multiple currency support, and responsive UI design.</p>
-                <div class="project-tech">
-                    <span>React</span>
-                    <span>API Integration</span>
-                    <span>Responsive Design</span>
-                </div>
-                <a href="https://github.com/sufyankhan2412/Currency-Converter-Website" target="_blank" class="project-link">View Code <i class='bx bx-link-external'></i></a>
-            </div>
-
-            <div class="project-card">
-                <div class="project-header">Book Store</div>
-                <p class="project-type">E-Commerce with Advanced Filtering</p>
-                <p class="project-description">Online bookstore with product search, category filters, advanced sorting, and structured backend APIs for seamless shopping.</p>
-                <div class="project-tech">
-                    <span>MERN Stack</span>
-                    <span>Search & Filter</span>
-                    <span>REST APIs</span>
-                </div>
-                <a href="https://github.com/sufyankhan2412/Book-Store" target="_blank" class="project-link">View Code <i class='bx bx-link-external'></i></a>
             </div>
         </div>
     </section>
 
     <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
-        <h2 class="heading">Get In <span>Touch</span></h2>
-        <div class="contact-wrapper">
-            <div class="contact-info">
-                <h3>Let's Connect</h3>
-                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-                <div class="contact-details">
-                    <div class="contact-item">
+        <div class="contact-container">
+            <h2 class="section-title">Let's Discuss Your <span>Project</span></h2>
+            <div class="contact-wrapper">
+                <div class="contact-form-section">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Project Title" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Tell me about your project..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info-section">
+                    <div class="contact-info-item">
                         <i class='bx bx-map'></i>
                         <div>
                             <h4>Location</h4>
                             <p>Islamabad, Pakistan</p>
                         </div>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-info-item">
                         <i class='bx bx-phone'></i>
                         <div>
                             <h4>Phone</h4>
                             <p>+92 315 5966449</p>
                         </div>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-info-item">
                         <i class='bx bx-envelope'></i>
                         <div>
                             <h4>Email</h4>
                             <p>sufyankh2024801@gmail.com</p>
                         </div>
                     </div>
+                    <div class="contact-info-item">
+                        <i class='bx bx-link'></i>
+                        <div>
+                            <h4>Follow Me</h4>
+                            <div class="social-links">
+                                <a href="https://www.instagram.com/sufyankhan24_" target="_blank"><i class='bx bxl-instagram'></i></a>
+                                <a href="https://www.linkedin.com/in/sufyan-khan-3683bb291" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                                <a href="https://github.com/sufyankhan2412" target="_blank"><i class='bx bxl-github'></i></a>
+                                <a href="https://www.facebook.com/sufyankhan3082" target="_blank"><i class='bx bxl-facebook'></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <form class="contact-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Full Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Email Address" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Subject" required>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="social-icons">
-                <a href="https://www.instagram.com/sufyankhan24_" target="_blank"><i class='bx bxl-instagram'></i></a>
-                <a href="https://www.facebook.com/sufyankhan3082" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
-                <a href="https://www.linkedin.com/in/sufyan-khan-3683bb291" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/sufyankhan2412" target="_blank"><i class='bx bxl-github'></i></a>
+        <div class="footer-container">
+            <div class="footer-content">
+                <p>&copy; 2026 Muhammad Sufyan. All Rights Reserved.</p>
+                <p>Designed & Developed by <strong>Sufyan Khan</strong></p>
             </div>
-            <ul class="footer-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <p class="copyright">&copy; 2024 Muhammad Sufyan. All Rights Reserved.</p>
+            <div class="footer-nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
     </footer>
 

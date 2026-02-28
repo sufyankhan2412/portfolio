@@ -1,32 +1,31 @@
-// Toggle Navbar Menu
+// ==================== MOBILE MENU ==================== //
 const menuIcon = document.getElementById('menu-icon');
-const navbar = document.querySelector('.navbar');
+const navMenu = document.querySelector('.nav-menu');
 
-menuIcon.addEventListener('click', function() {
-    navbar.classList.toggle('active');
+menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
 });
 
-// Close navbar when a link is clicked
-const navLinks = document.querySelectorAll('.navbar a');
-navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-        navbar.classList.remove('active');
+// Close menu when a link is clicked
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
     });
 });
 
-// Active Navigation Link
-window.addEventListener('scroll', function() {
-    let current = '';
+// ==================== ACTIVE NAV LINK ==================== //
+const navLinks = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
-    
+    let current = '';
+
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 200) {
+        if (section.offsetTop <= window.scrollY + 100) {
             current = section.getAttribute('id');
         }
     });
-    
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href').slice(1) === current) {
@@ -35,13 +34,51 @@ window.addEventListener('scroll', function() {
     });
 });
 
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+// ==================== CONTACT FORM ==================== //
+const contactForm = document.querySelector('.contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
+        
+        // Get form values
+        const name = this.querySelector('input[type="text"]').value;
+        const email = this.querySelector('input[type="email"]').value;
+        const subject = this.querySelectorAll('input[type="text"]')[1].value;
+        const message = this.querySelector('textarea').value;
+
+        // Validate email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address');
+            return;
+        }
+
+        // Log form data (in production, send to server)
+        console.log({
+            name,
+            email,
+            subject,
+            message
+        });
+
+        // Show success message
+        alert('Thank you for your message! I will get back to you soon.');
+        
+        // Reset form
+        this.reset();
+    });
+}
+
+// ==================== SMOOTH SCROLL ==================== //
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').slice(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+            targetElement.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
@@ -49,36 +86,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form Validation and Submission
-const form = document.querySelector('form');
-if (form) {
-    form.addEventListener('submit', function(event) {
-        const name = document.querySelector('input[placeholder="Full Name"]');
-        const email = document.querySelector('input[placeholder="Email Address"]');
-        const phone = document.querySelector('input[placeholder="Phone Number"]');
-        const subject = document.querySelector('input[placeholder="Subject"]');
-        const message = document.querySelector('textarea[placeholder="Your Message"]');
-        
-        if (!name.value.trim() || !email.value.trim() || !phone.value.trim() || !subject.value.trim() || !message.value.trim()) {
-            event.preventDefault();
-            alert('Please fill out all fields.');
-            return;
-        }
-        
-        // Validate email format
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email.value)) {
-            event.preventDefault();
-            alert('Please enter a valid email address.');
-            return;
-        }
-        
-        // Show success message
-        alert('Thank you for your message! I will get back to you soon.');
-    });
-}
-
-// Scroll Animation Observable
+// ==================== SCROLL ANIMATIONS ==================== //
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
@@ -89,12 +97,16 @@ const observer = new IntersectionObserver(function(entries) {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
             entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-// Observe all sections
-document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
+// Observe all project cards and testimonial cards
+document.querySelectorAll('.project-card, .testimonial-card, .skill-box').forEach(element => {
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(20px)';
+    element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(element);
 });
 
